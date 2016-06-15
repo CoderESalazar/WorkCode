@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EdsCompanyModelStoreContainer" CdmEntityContainer="EdsCompanyEntities">
+    <EntitySetMapping Name="Section_Table">
+      <EntityTypeMapping TypeName="EdsCompanyModel.Section_Table">
+        <MappingFragment StoreEntitySet="Section_Table">
+          <ScalarProperty Name="primary_key" ColumnName="primary_key" />
+          <ScalarProperty Name="section_num" ColumnName="section_num" />
+          <ScalarProperty Name="section_name" ColumnName="section_name" />
+          <ScalarProperty Name="display_id" ColumnName="display_id" />
+          <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

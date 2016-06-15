@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EdsCompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Section_Table">
+    <Key>
+      <PropertyRef Name="primary_key" />
+    </Key>
+    <Property Name="primary_key" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="section_num" Type="int" Nullable="false" />
+    <Property Name="section_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="display_id" Type="bit" Nullable="false" />
+    <Property Name="sort_order" Type="int" />
+  </EntityType>
+  <EntityContainer Name="EdsCompanyModelStoreContainer">
+    <EntitySet Name="Section_Table" EntityType="Self.Section_Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

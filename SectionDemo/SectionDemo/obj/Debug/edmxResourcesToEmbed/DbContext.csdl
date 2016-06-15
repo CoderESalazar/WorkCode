@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EdsCompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Section_Table">
+    <Key>
+      <PropertyRef Name="primary_key" />
+    </Key>
+    <Property Name="primary_key" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="section_num" Type="Int32" Nullable="false" />
+    <Property Name="section_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="display_id" Type="Boolean" Nullable="false" />
+    <Property Name="sort_order" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="EdsCompanyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Section_Table" EntityType="Self.Section_Table" />
+  </EntityContainer>
+</Schema>
