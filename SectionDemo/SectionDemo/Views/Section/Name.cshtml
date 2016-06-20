@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SectionDemo.Models.SectionViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<h3 style="background-color: yellow;">@ViewBag.Name</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionNumber)
+        </th>   
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionNumber)
+        </td>     
+    </tr>
+}
+
+</table>

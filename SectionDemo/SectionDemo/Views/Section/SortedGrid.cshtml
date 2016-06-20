@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SectionDemo.Models.SectionViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SortedGrid</title>
+</head>
+<body>
+
+    @foreach (var headers in Model.GroupBy(t => t.DictSectionName))
+    {
+
+        <h3>@headers.Key</h3>
+
+        foreach (var sections in headers.OrderBy(c => c.SortOrder))
+        {
+
+            @Html.CheckBoxFor(t => sections.Display);
+
+            @sections.SectionName @( " - ") @sections.Description<br/>
+
+        }
+
+
+    }
+
+</body>
+</html>

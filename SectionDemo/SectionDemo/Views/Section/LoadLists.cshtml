@@ -1,0 +1,45 @@
+﻿@model SectionDemo.ViewModels.ListModelsVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoadLists</title>
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    
+    @using (Html.BeginForm())
+    {
+
+        <h2>Employee Settings</h2>
+        for (int i = 0; i < Model.EmployeeSettings.Count(); i++)
+        {            
+            @Html.TextBoxFor(item => Model.EmployeeSettings[i].FirstName) 
+            @Html.TextBoxFor(item => Model.EmployeeSettings[i].LastName)
+            <br /><br />
+        }
+
+        <h2>Name Settings</h2>
+        for (int i = 0; i < Model.NameSettings.Count(); i++)
+        {
+            @Html.TextBoxFor(item => Model.NameSettings[i].SectionNumber)            
+            @Html.TextBoxFor(item => Model.NameSettings[i].SectionName)
+            <br />
+            <br />
+        }
+
+        <input type="submit" id="submit" value="Update" />
+
+    }
+    
+
+</body>
+</html>
